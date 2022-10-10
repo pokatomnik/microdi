@@ -39,12 +39,12 @@ class ServiceFooBar {
         private readonly bar: ServiceBar
     ) {}
 }
-provide(ServiceFooBar, [Foo, Bar]);
+provide(ServiceFooBar, [ServiceFoo, ServiceBar]);
 
 class App {
     public constructor(fooBar: ServiceFooBar) {}
 }
-provide(App, [[ServiceFooBar]]);
+provide(App, [ServiceFooBar]);
 
 const app = resolve(App); // App!
 ```
