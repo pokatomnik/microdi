@@ -50,6 +50,7 @@ const app = resolve(App); // App!
 ```
 
 ### Features:
+- No experimental decorators!
 - Lazy initialization: services are being instantiated on the fly on demand.
 - You can use a scope for your services. Just do the following:
 ```typescript
@@ -62,6 +63,7 @@ servicesMap.provides(Foo, []);
 ### Limitations:
 - Cyclic dependencies are not supported.
 - This library can instantiate services as a singletons only.
+- No typechecking at dependencies
 
 ### Tests:
 ```
